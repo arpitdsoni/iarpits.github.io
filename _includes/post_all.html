@@ -1,0 +1,17 @@
+<!-- Post All Section -->
+<section id="post-all">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        {% for post in site.categories['blog'] %}
+        <div class="post-header">
+          <a href="{{ post.url | relative_url }}"><h1 class="post-title">{{ post.title }}</h1></a>
+        </div>
+        <div class="post-header">
+          <p class="post-meta">{{ post.date | date: "%B %-d, %Y — %H:%M" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
