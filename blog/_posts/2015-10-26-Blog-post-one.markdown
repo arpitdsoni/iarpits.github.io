@@ -6,6 +6,38 @@ date:   2015-10-26 16:51:11
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget libero vel turpis eleifend convallis vel vitae est. Suspendisse mattis ut nulla dapibus ultricies. Suspendisse feugiat felis mi, sit amet pharetra massa volutpat sit amet. Morbi gravida, libero sit amet lacinia tristique, ipsum lacus fermentum eros, ut sollicitudin lacus massa ut leo. In quis urna eu lorem sagittis posuere. Pellentesque tempus consequat urna. Pellentesque blandit elit ac nulla semper vestibulum. Quisque ultrices vestibulum nisi, nec rhoncus est viverra eget. Interdum et malesuada fames ac ante ipsum primis in faucibus.
 
+```swift
+extension ORKPredefinedTaskOption: OptionSetGenerating {
+private struct Flags {
+        static let excludeInstructions = "excludeInstructions"
+        static let excludeConclusion = "excludeConclusion"
+        static let excludeAccelerometer = "excludeAccelerometer"
+        static let excludeDeviceMotion = "excludeDeviceMotion"
+        static let excludePedometer = "excludePedometer"
+        static let excludeLocation = "excludeLocation"
+        static let excludeHeartRate = "excludeHeartRate"
+        static let excludeAudio = "excludeAudio"
+    }
+
+    public static func generate(_ stringValue: String) -> ORKPredefinedTaskOption? {
+        switch stringValue {
+        case Flags.excludeInstructions : return .excludeInstructions
+        case Flags.excludeConclusion : return .excludeConclusion
+        case Flags.excludeAccelerometer : return .excludeAccelerometer
+        case Flags.excludeDeviceMotion : return .excludeDeviceMotion
+        case Flags.excludePedometer : return .excludePedometer
+        case Flags.excludeLocation : return .excludeLocation
+        case Flags.excludeHeartRate : return .excludeHeartRate
+        case Flags.excludeAudio : return .excludeAudio
+        default: return nil
+        }
+    }
+}
+
+//Example
+let options: ORKPredefinedTaskOption = ORKPredefinedTaskOption.decode(from: json.value(forKey: TaskKeys.predefinedTaskOptions, defaultValue: []))
+```
+
 Suspendisse egestas sit amet tellus non bibendum. Donec a pellentesque elit. Donec eu ex nec urna semper dignissim non eget magna. Maecenas facilisis nunc eu mi auctor eleifend. Praesent ut sollicitudin ligula, dignissim consectetur purus. Pellentesque sed ligula sapien. Ut non placerat risus. Aliquam posuere, odio ut semper hendrerit, lectus leo maximus orci, vel condimentum tortor ipsum id lacus. Sed lacinia magna nec tortor sollicitudin, ut tempor mi pretium. In in lacus sed mi aliquet scelerisque. Maecenas nisl mauris, euismod ac ultrices vel, molestie eu massa. Phasellus maximus ultrices facilisis. Integer imperdiet ut felis ac tempor. Pellentesque auctor turpis at turpis cursus consequat. Quisque eget euismod elit, et varius justo. Maecenas porttitor lobortis sem sit amet lacinia.
 
 Integer bibendum enim nec neque vulputate, in commodo elit mollis. Proin convallis, justo ac ornare porta, velit mauris tristique sapien, quis egestas nisl nisi in mi. Mauris vulputate orci a nulla eleifend malesuada. Aenean eget dictum risus, at semper ligula. Donec sit amet sodales ante. In hac habitasse platea dictumst. Praesent sagittis ipsum sem, nec pulvinar ante semper et. Pellentesque felis ante, posuere in placerat vitae, mollis quis est. Duis at risus et mi eleifend condimentum id ut turpis. Quisque rhoncus tristique felis sit amet convallis. Praesent ornare, lorem sed cursus facilisis, quam velit posuere massa, in congue mi nisl vel lectus. Nullam mi nisl, iaculis eu ornare ut, faucibus quis odio. Aliquam dapibus purus sed libero pretium congue. Nullam convallis eros eu cursus vehicula. Proin facilisis tempor lorem, nec varius ante luctus dapibus. Cras ornare eget tortor eu molestie.

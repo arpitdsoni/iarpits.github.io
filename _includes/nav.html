@@ -8,15 +8,24 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#page-top">{{ site.title }}</a>
+                {% if home == true %}
+                  <a class="navbar-brand" href="#page-top">{{ site.title }}</a>
+                  {% else %}
+                  <a class="navbar-brand" href="{{ "/#page-top" | relative_url }}">{{ site.title }}</a>
+                  {% endif %}
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="hidden">
+                      {% if home == true %}
                         <a href="#page-top"></a>
+                        {% else %}
+                        <a href="{{ "/#page-top" | relative_url }}">Portfolio</a>
+                        {% endif %}
                     </li>
                     <li class="page-scroll">
                       {% if home == true %}
