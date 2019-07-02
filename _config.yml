@@ -40,7 +40,7 @@ footer:
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
   - title: twitter
-    url: https://twitter.com/iaarpit
+    url: https://twitter.com/iarpits
   # - title: facebook
   #   url:
   - title: stack-overflow
@@ -48,11 +48,11 @@ social:
   # - title: bitbucket
   #   url:
   - title: github
-    url: https://github.com/iaarpit
+    url: https://github.com/iarpits
 
 # Postal address (add as many lines as necessary)
 address:
-  - line: Gaithersburg, Maryland
+  - line: Washington DC Area
 
 # Credits content
 # credits: 'Freelancer is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'

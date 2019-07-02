@@ -1,0 +1,20 @@
+<!-- Post Limited Section -->
+<section id="post-limited">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2>Blog</h2>
+        <hr class="star-primary">
+        {% for post in site.categories['blog'] limit:3 %}
+        <div class="post-header">
+          <a href="{{ post.url | relative_url }}"><h1 class="post-title">{{ post.title }}</h1></a>
+        </div>
+        <div class="post-header">
+          <p class="post-meta">{{ post.date | date: "%B %-d, %Y — %H:%M" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %}</p>
+        </div>
+        {% endfor %}
+        <h3 id="Blog" style="padding-top: 1.5em"><a href="/blog"> More >> </a></h3>
+      </div>
+    </div>
+  </div>
+</section>
