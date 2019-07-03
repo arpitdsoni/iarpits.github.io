@@ -1,63 +1,54 @@
    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      {% if home == true %}
+      <a class="navbar-brand" href="#page-top">
+          <img src="/img/cartoon_me.png" width="40" height="40" class="d-inline-block align-top" alt="">
+      </a>
+      {% else %}
+      <a class="navbar-brand" href="{{ '/#page-top' | relative_url }}">
+        <img src="/img/cartoon_me.png" width="40" height="40" class="d-inline-block align-top" alt="">
+      </a>
+      {% endif %}
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav pull-right">
+              <!-- <li class="hidden">
                 {% if home == true %}
-                  <a class="navbar-brand" href="#page-top">{{ site.title }}</a>
+                  <a href="#page-top"></a>
                   {% else %}
-                  <a class="navbar-brand" href="{{ "/#page-top" | relative_url }}">{{ site.title }}</a>
+                  <a href="{{ "/#page-top" | relative_url }}">Portfolio</a>
                   {% endif %}
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                      {% if home == true %}
-                        <a href="#page-top"></a>
-                        {% else %}
-                        <a href="{{ "/#page-top" | relative_url }}">Portfolio</a>
-                        {% endif %}
-                    </li>
-                    <!-- <li class="page-scroll">
-                      {% if home == true %}
-                        <a href="#portfolio">Portfolio</a>
-                        {% else %}
-                        <a href="{{ "/#portfolio" | relative_url }}">Portfolio</a>
-                        {% endif %}
-                    </li> -->
-                    <!-- <li class="page-scroll">
-                      {% if home == true %}
-                        <a href="#about">About</a>
-                        {% else %}
-                        <a href="{{ "/#about" | relative_url }}">About</a>
-                        {% endif %}
-                    </li> -->
-                    <li class="page-scroll">
-                      {% if home == true %}
-                        <a href="#post-limited">Blog</a>
-                        {% else %}
-                        <a href="{{ "/#post-limited" | relative_url }}">Blog</a>
-                        {% endif %}
-                    </li>
-                    <!-- <li class="page-scroll">
-                      {% if home == true %}
-                        <a href="#contact">Contact</a>
-                        {% else %}
-                        <a href="{{ "/#contact" | relative_url }}">Contact</a>
-                        {% endif %}
-                    </li> -->
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
+              </li> -->
+              <!-- <li class="page-scroll">
+                {% if home == true %}
+                  <a href="#portfolio">Portfolio</a>
+                  {% else %}
+                  <a href="{{ "/#portfolio" | relative_url }}">Portfolio</a>
+                  {% endif %}
+              </li> -->
+              <!-- <li class="page-scroll">
+                {% if home == true %}
+                  <a href="#about">About</a>
+                  {% else %}
+                  <a href="{{ "/#about" | relative_url }}">About</a>
+                  {% endif %}
+              </li> -->
+              <li class="nav-item">
+                {% if blog == true %}
+                  <a class="nav-link active" href="/blog">Blog</a>
+                {% else %}
+                  <a class="nav-link" href="/blog">Blog</a>
+                {% endif %}
+              </li>
+              <!-- <li class="page-scroll">
+                {% if home == true %}
+                  <a href="#contact">Contact</a>
+                  {% else %}
+                  <a href="{{ "/#contact" | relative_url }}">Contact</a>
+                  {% endif %}
+              </li> -->
+          </ul>
+      </div>
     </nav>
