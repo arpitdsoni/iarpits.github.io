@@ -2,11 +2,11 @@
 title: Arpit Soni
 email: email@iarpits.com
 url: https://iarpits.com
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
-keywords: "your keywords, separated by commas"
+description: "I am a Software Engineer. This is my my personal site where you can find my resume, blogs and social handles."
+keywords: "iarpits, blog, portfolio, resume, arpit, soni, ios, swift"
 skills: "Swift - Dart - JavaScript - C++ - Python - Kotlin - Flutter - Vue.js - Azure - Firebase"
 qoute: "I love challenging problems, I don't worry about the How?"
-meta_author: Soni Arpit
+meta_author: Arpit Soni
 
 # Google webmaster tools
 google_verify:
@@ -63,10 +63,14 @@ address:
 
 # Build settings
 markdown: kramdown
-permalink: pretty
+permalink: none
 
 # theme: jekyll-theme-cayman
 
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
