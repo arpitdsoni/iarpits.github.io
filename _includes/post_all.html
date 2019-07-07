@@ -8,9 +8,9 @@
         <div class="card" style="width: 18rem;">
           <div class="card-body">
             <a href="{{ post.url | relative_url }}">
-              <h5 class="card-title">{{ post.title }}</h5>
+              <h5 class="card-title no-text-transform">{{ post.title }}</h5>
             </a>
-            <h6 class="card-subtitle mb-2 text-muted">{{ post.date | date: "%B %-d, %Y" }}</h6>
+            <h6 class="card-subtitle mb-2 text-muted no-text-transform">{{ post.date | date: "%B %-d, %Y" }}</h6>
             <p class="card-text">{{ post.desc }}</p>
           </div>
         </div>

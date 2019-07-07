@@ -51,6 +51,8 @@ social:
   #   url:
   - title: github
     url: https://github.com/iarpits
+  - title: medium
+    url: https://medium.com/@iarpits
 
 # Postal address (add as many lines as necessary)
 address:
